@@ -112,6 +112,7 @@ void output()
 // Hàm in ra các mảng liên quan trong chương trình
 void show()
 {
+    // In tiêu đề cột
     cout << string(6 + 2, ' ');
     for (int col = 0; col < n; ++col)
     {
@@ -119,10 +120,11 @@ void show()
     }
     cout << endl;
 
-    // display a seperate line
+    // In đường phân cách
     cout << string(6 + 2, ' ');
     cout << string(n * 6, '-') << endl;
 
+    // In tiêu đề hàng và giá trị
     cout << setw(8) << "a |";
     for (int col = 0; col < n; ++col)
     {
@@ -150,9 +152,8 @@ int main()
 {
     input();    
     process();
-    // output();
-
-    show();
+    output();
+    // show();
 
     return 0;
 }

@@ -104,7 +104,7 @@ void output()
 }
 
 // Hàm in bảng quy hoạch
-void show_table()
+void show()
 {
     // In tiêu đề cột
     cout << string(6 + 2, ' ');
@@ -119,7 +119,7 @@ void show_table()
     cout << string(6 + 2, ' ');    
     cout << string((weight_limit + 1) * 6, '-') << '\n';
  
-    // display row titles and values
+    // In tiêu đề hàng và giá trị
     for (int r = 0; r < n + 1; ++r)
     {
         cout << setw(6) << r << " |";
@@ -137,6 +137,7 @@ int main()
     input();
     process();
     output();
+    // show();
 
     return 0;
 }

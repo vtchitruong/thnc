@@ -1,6 +1,5 @@
 import os
 import sys
-from prettytable import PrettyTable
 
 input_file = os.path.join(sys.path[0], 'knapsack.inp')
 output_file = os.path.join(sys.path[0], 'knapsack.out')
@@ -78,23 +77,28 @@ def output():
             f.write(line) if idx == len(item_stack) - 1 else f.write(line + '\n')
 
 
-def show_table():
-    pt = PrettyTable()
-
+def show():
     # In tiêu đề cột
-    column_header = [w for w in range(weight_limit + 1)]
-    column_header.insert(0, '') # chèn ô trống
-    pt.field_names = column_header
-
-    # row
-    for i in range(n + 1):
-        row = [x for x in D[i]]
-        row.insert(0, i) # Tiêu đề hàng
-        pt.add_row(row)
-    print(pt)
+    print(' ' * (6 + 2), end='')
+    for c in range(weight_limit + 1):
+        print(f'{c:>6}', end='')
+    
+    print()
+    
+    # In đường phân cách
+    print(' ' * (6 + 2), end='')
+    print('-' * ((weight_limit + 1) * 6))
+    
+    # In tiêu đề hàng và giá trị
+    for r in range(n + 1):
+        print(f'{r:>6} |', end='')
+        for c in range(weight_limit + 1):
+            print(f'{D[r][c]:>6}', end='')
+        print()
 
 
 if __name__ == '__main__':
     input_data()
     process()
     output()
+    # show()
