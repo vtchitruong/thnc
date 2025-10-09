@@ -14,7 +14,7 @@ value = [] # mảng lưu giá trị mỗi vật
 D = []
 
 
-def input_data():
+def input():
     global n, weight_limit, weight, value
 
     with open(input_file) as f:
@@ -98,7 +98,7 @@ def show():
 
 
 if __name__ == '__main__':
-    input_data()
+    input()
     process()
     output()
     # show()
