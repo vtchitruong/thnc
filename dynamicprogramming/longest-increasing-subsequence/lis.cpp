@@ -110,7 +110,7 @@ void output()
 
 
 // Hàm in ra các mảng liên quan trong chương trình
-void show_arrays()
+void show()
 {
     cout << string(6 + 2, ' ');
     for (int col = 0; col < n; ++col)
@@ -150,7 +150,9 @@ int main()
 {
     input();    
     process();
-    output();
+    // output();
+
+    show();
 
     return 0;
 }

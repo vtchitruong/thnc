@@ -1,7 +1,6 @@
 import os
 import sys
 from collections import deque
-from prettytable import PrettyTable
 
 input_file = os.path.join(sys.path[0], 'lis.inp')
 output_file = os.path.join(sys.path[0], 'lis.out')
@@ -17,8 +16,8 @@ D = []
 trace = []
 
 
-def input_data():
-    with  open(input_file) as f:
+def input():
+    with open(input_file) as f:
         global n
         n = int(f.readline())
 
@@ -77,30 +76,39 @@ def output():
         f.write(s)
 
 
-def show_arrays():
-    pt = PrettyTable()
-
-    column_header = [r for r in range(n)]
-    column_header.insert(0, '')
-    pt.field_names = column_header
-
-    tmp_A = A.copy()
-    tmp_A.insert(0, 'A')
-
-    tmp_D = D.copy()
-    tmp_D.insert(0, 'D')
-
-    tmp_trace = trace.copy()
-    tmp_trace.insert(0, 'trace')
-
-    pt.add_row(tmp_A)
-    pt.add_row(tmp_D)
-    pt.add_row(tmp_trace)
-    print(pt)
+def show():
+    # In tiêu đề cột
+    print(' ' * (6 + 2), end='')
+    
+    for col in range(n):
+        print(f'{col:>6}', end='')
+    print()
+    
+    # In đường phân cách
+    print(' ' * (6 + 2), end='')
+    print('-' * (n * 6))
+    
+    # In mảng a
+    print(f'{'a |':>8}', end='')
+    for col in range(n):
+        print(f'{A[col]:>6}', end='')
+    print()
+    
+    # In mảng d
+    print(f'{'d |':>8}', end='')
+    for col in range(n):
+        print(f'{D[col]:>6}', end='')
+    print()
+    
+    # In mảng trace
+    print(f'{'trace |':>8}', end='')
+    for col in range(n):
+        print(f'{trace[col]:>6}', end='')
+    print()
 
 
 if __name__ == '__main__':
-    input_data()
+    input()
     process()
-    output()
-    show_arrays()
+    # output()
+    show()
