@@ -54,7 +54,7 @@ void process()
     // Đặt kích thước cho s là 3 ký tự
     s.resize(n);
 
-    // Cấp phát dung lượng cho đầu ra
+    // Đặt trước dung lượng cho đầu ra
     result.reserve((n + 1) * pow(3, n));
 
     // Gọi backtracking() bắt đầu từ vị trí 0
