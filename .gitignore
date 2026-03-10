@@ -1,2 +1,4 @@
 **/*.exe
 ab1.out
+.vscode/*
+test.py
