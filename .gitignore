@@ -1,4 +1,23 @@
-**/*.exe
-ab1.out
-.vscode/*
-test.py
+# 1. Ignore everything by default
+*
+
+# 2. But DO NOT ignore folders (crucial for navigation)
+!*/
+
+# 3. DO NOT ignore your source files and project configs
+!*.cpp
+!*.h
+!*.hpp
+!*.py
+!*.md
+!*.txt
+!.gitignore
+!.vscode/
+
+# 4. Explicitly ignore Windows executables (just in case)
+*.exe
+
+# 5. RE-IGNORE Python environment folders (Last rule wins)
+# This overrides the !*.py rule for these specific paths
+.venv/
+__pycache__/

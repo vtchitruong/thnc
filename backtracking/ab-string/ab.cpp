@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cstring>
 
-#define input_file "ab1.inp"
-#define output_file "ab1.out"
+#define input_file "ab.inp"
+#define output_file "ab.out"
 
 using namespace std;
 
@@ -20,7 +20,6 @@ FILE *f;
 // biến lưu toàn bộ output
 string result = "";
 
-
 void input()
 {
     ios::sync_with_stdio(false);
@@ -30,7 +29,6 @@ void input()
 
     cin >> n;
 }
-
 
 // Hàm dùng để ghi result ra tập tin
 inline void flush_buffer()
@@ -45,7 +43,6 @@ inline void flush_buffer()
         result.clear();
     }
 }
-
 
 void backtracking(int i, char previous)
 {
@@ -82,7 +79,6 @@ void backtracking(int i, char previous)
     }
 }
 
-
 void process_output()
 {
     // Khởi tạo s gồm n ký tự 'A'
@@ -100,7 +96,6 @@ void process_output()
 
     fclose(f);
 }
-
 
 int main()
 {
