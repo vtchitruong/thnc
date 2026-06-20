@@ -60,14 +60,14 @@ lli power_modulo(lli a, lli b)
 int main()
 {
     // Kiểm tra phép cộng modulo
-    a = 1e9;
-    b = 8;
+    lli a = 1e9;
+    lli b = 8;
 
     check_add_modulo(a, b);
 
     // Tính luỹ thừa modulo
-    lli a = 3;
-    lli b = 11;
+    a = 3;
+    b = 11;
 
     lli pm = power_modulo(a, b);
 
