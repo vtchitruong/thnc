@@ -6,7 +6,7 @@ Array = [2, 3, 5, 5, 2, 4, 3]
 
 # Cách 1: dùng vòng lặp và XOR dồn từng phần tử
 def find_unique(A):
-    # Khởi tạo phần tử duy nhất bằng 0 vì x ^ 0 = x
+    # Khởi tạo
     unique_element = 0
 
     # Duyệt từng phần tử trong mảng A
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     print(f'Mảng ban đầu: {Array}')
 
     unique = find_unique(Array)
-    print(f'Phần tử duy nhất: {unique}')
+    print(f'Phần tử xuất hiện một lần: {unique}')
 
     unique_2 = find_unique_2(Array)
-    print(f'Phần tử duy nhất: {unique_2}')
+    print(f'Phần tử xuất hiện một lần: {unique_2}')

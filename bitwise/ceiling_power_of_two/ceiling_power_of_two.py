@@ -19,4 +19,4 @@ if __name__ == '__main__':
     num = int(input('Nhập n: '))
 
     result = ceiling_power_of_two(num)
-    print(f'Luỹ thừa của 2 nhỏ nhất mà lớn hơn hoặc bằng {num}: {result}')
+    print(f'Lũy thừa của 2 nhỏ nhất mà lớn hơn hoặc bằng {num}: {result}')
