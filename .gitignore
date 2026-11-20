@@ -11,6 +11,8 @@
 !*.py
 !*.md
 !*.txt
+!*.inp
+!*.out
 !.gitignore
 !.vscode/
 
