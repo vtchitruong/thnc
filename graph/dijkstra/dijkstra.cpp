@@ -15,7 +15,7 @@ int number_of_vertices, number_of_edges, start, finish;
 // Danh sách kề lưu đồ thị
 vector<vector<pair<int, lli>>> g;
 
-// d[u] là khoảng cách ngắn nhất từ đỉnh start đến đỉnh u
+// d[v] là khoảng cách ngắn nhất từ đỉnh start đến đỉnh v
 vector<lli> d;
 
 // trace[v] = u nghĩa là: liền trước đỉnh v là đỉnh u, tức u -> v
